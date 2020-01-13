@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejidike Esther</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Philosopher&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Philosopher', sans-serif;
+        }
+        header{
+            background-color: black;
+            margin-top: -21px;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            padding: 50px 0 90px;
+            font-family: 'Satisfy', cursive;
+            font-size: 30px;
+        }
+        @media(max-width: 800px){
+            h1{
+                padding: 30px;
+                font-family: 'Cookie', cursive;
+            }
+        }
+        #image-container{
+            background-color: black;
+            color: white;
+        }
+        #image-container:nth-child(2){
+            padding-bottom: 20px;
+        }
+        #image-container img{
+            filter: grayscale(100%);
+            box-shadow: 0 -4px 20px 5px white ;
+            width: 60%;
+            height: 50%;
+            display: block;
+            margin: auto;
+            margin-top: -22px;
+            background-size: cover;
+            background-position: center;
+            padding-bottom: 30px;
+            animation-name: pinkheart;
+            animation-duration: 2s;
+            animation-iteration-count:infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes pinkheart{
+                0%{
+                    transform: scale(1) ;
+                }
+                50%{
+                    transform: scale(0.99);
+                }
+            }
+        @media(max-width: 800px){
+            #image-container img{
+                width: 100%;
+                box-shadow: none;
+                animation: none;
+            }
+        }
+        p{
+            text-align: center;
+            font-size: 30px;
+            line-height: 1.5;
+        }
+        @media(max-width: 600px){
+            p{
+                font-size: 1em;
+            }
+        }
+        
+       /* #contact-section{
+            padding: 100px;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        button{
+            padding: 25px;
+            width: 180px;
+            margin-right: 18px;
+            outline: none;
+            background-color: darkred;
+            color: white;
+            border: none;
+            box-shadow: 0 -4px 10px 5px grey;
+            
+        }
+        @media(max-width:800px){
+            button{
+                background-color: darkred;
+                padding: 20px;
+                width: 140px;
+                margin-top: 15px;
+            }
+        } */
+        footer{
+            color: white;
+            background-color: black;
+            padding: 10px;
+            text-align: center;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        #title{
+            color: red;
+        }
+        #work-section{
+            padding: 10px 0 50px 0;
+            width: 80%;
+            margin: auto;
+            display: grid;
+                /* minmax means never less than 100px and never bigger than 1 fraction*/
+            grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+            grid-gap: 15px;
+        }
+        #work-section img{
+            animation-name: pinkheart;
+            width: 100%;
+        }
+        @media(max-width:600px){
+            
+            #work-section img{
+                width: 100%;
+            }
+        }
+        h2{
+            margin-left: 20px;
+            margin-top: 40px;
+            font-size: 2em;
+            text-align: center;
+            background: -webkit-linear-gradient(90deg,darkred, black);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+           text-decoration: underline;
+        }
+        button{
+            display: block;
+            margin: auto;
+            margin-bottom: 50px;
+            width: 80%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 1.2em;
+            background: linear-gradient(50deg,darkred,black);
+            color: white;
+        }
+        @media(max-width: 600px){
+            button{
+                padding: 5px;
+                font-size: 1em;
+            }
+            h2{
+                font-size: 1.5em;
+            }
+        }
+        
+
+        .container {
+            position: relative;
+            width: 100%;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background: linear-gradient(50deg,darkred,black);
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 0.8em;
+            line-height: 1.3;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+    <body>
+       <header>
+           <h1>Ejidike Esther</h1>
+       </header>
+       <div id="image-container">
+           <img src="images/20191019_154635.jpg" alt="Ejidike Esther">
+           <p id="title">The Frontend Web Developer</p>
+           <p>Technologies I work with:<br> HTML, CSS, JavaScript, BootStrap,<br>Git & GitHub, WordPress CMS</p>
+           <p>Favorite Language is JavaScript, an avid learner & reader,<br> absolutely love working with APIs</p>
+       </div>
+       <!--<div id="contact-section">
+           <button><a href="https://codepen.io/King_Esther" target="_blank">See My Works</a></button>
+           <button><a href="mailto:ejidikeesther@gmail.com?Subject=I%Want%to%Work%With%You">Contact Me</a></button>
+       </div> -->
+       <h2>Some of my work</h2>
+       <div id="work-section">
+           <div class="container">
+               <img src="images/geosearch web app.png">
+               <div class="overlay">
+                   <div class="text">GeoSearch returns the weather conditions of various cities in the world.</div>
+               </div>
+           </div>
+
+           <div class="container">
+               <img src="images/portfolio project.png">
+               <div class="overlay">
+                   <div class="text">Personal portfolio, a freecodecamp project</div>
+               </div>
+           </div>
+
+            <div class="container">
+                <img src="images/survey-form.png">
+                <div class="overlay">
+                    <div class="text">Survey form, a freecodecamp project</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="images/css filter check.png">
+                <div class="overlay">
+                    <div class="text">Check various CSS filters and see their CSS code</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="images/bold-trail.com_(iPad Pro).png">
+                <div class="overlay">
+                    <div class="text">Boldtrail, A fashion and photography company</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="images/javascript calculator.png">
+                <div class="overlay">
+                    <div class="text">A beautiful calcuator created with HTML, CSS and JavaScript</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="images/transparent form.png">
+                <div class="overlay">
+                    <div class="text">Transparent login form, created just for fun</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="images/www.tonyosime.com_(iPad Pro).png">
+                <div class="overlay">
+                    <div class="text">An employee training and consultation company website</div>
+                </div>
+            </div>
+   
+       </div>
+       <button>Contact me</button>
+       <footer>&copy;2019 Ejidike Esther</footer>
+    </body>
+</html>
+                
