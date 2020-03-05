@@ -1,0 +1,194 @@
+body{
+    margin: 0;
+    font-family: 'Philosopher', sans-serif;
+}
+header{
+    background-color: black;
+    margin-top: -21px;
+}
+h1{
+    color: white;
+    text-align: center;
+    padding: 50px 0 90px;
+    font-family: 'Satisfy', cursive;
+    font-size: 30px;
+}
+@media(max-width: 800px){
+    h1{
+        padding: 30px;
+        font-family: 'Cookie', cursive;
+    }
+}
+#image-container{
+    background-color: black;
+    color: white;
+}
+#image-container:nth-child(2){
+    padding-bottom: 20px;
+}
+#image-container img{
+    filter: grayscale(100%);
+    box-shadow: 0 -4px 20px 5px white ;
+    width: 60%;
+    height: 50%;
+    display: block;
+    margin: auto;
+    margin-top: -22px;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 30px;
+    animation-name: pinkheart;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+}
+@keyframes pinkheart{
+        0%{
+            transform: scale(1) ;
+        }
+        50%{
+            transform: scale(0.99);
+        }
+    }
+@media(max-width: 800px){
+    #image-container img{
+        width: 100%;
+        box-shadow: none;
+        animation: none;
+    }
+}
+p{
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.5;
+}
+@media(max-width: 600px){
+    p{
+        font-size: 1em;
+    }
+}
+
+/* #contact-section{
+    padding: 100px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+button{
+    padding: 25px;
+    width: 180px;
+    margin-right: 18px;
+    outline: none;
+    background-color: darkred;
+    color: white;
+    border: none;
+    box-shadow: 0 -4px 10px 5px grey;
+    
+}
+@media(max-width:800px){
+    button{
+        background-color: darkred;
+        padding: 20px;
+        width: 140px;
+        margin-top: 15px;
+    }
+} */
+footer{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+#title{
+    color: red;
+}
+#work-section{
+    padding: 10px 0 50px 0;
+    width: 80%;
+    margin: auto;
+    display: grid;
+        /* minmax means never less than 100px and never bigger than 1 fraction*/
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    grid-gap: 15px;
+}
+#work-section img{
+    animation-name: pinkheart;
+    width: 100%;
+}
+@media(max-width:600px){
+    
+    #work-section img{
+        width: 100%;
+    }
+}
+h2{
+    margin-left: 20px;
+    margin-top: 40px;
+    font-size: 2em;
+    text-align: center;
+    background: -webkit-linear-gradient(90deg,darkred, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   text-decoration: underline;
+}
+button{
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    background: linear-gradient(50deg,darkred,black);
+    color: white;
+}
+button:hover{
+    background: darkred;
+}
+@media(max-width: 600px){
+    button{
+        padding: 5px;
+        font-size: 1em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background: linear-gradient(50deg,darkred,black);
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 0.8em;
+    line-height: 1.3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
